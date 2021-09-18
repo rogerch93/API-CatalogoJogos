@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_CatalogoJogos.Repositories
 {
-    public interface IJogoRepository
+    public interface IJogoRepository : IDisposable
     {
         Task<List<Jogo>> Obter(int pagina, int quantidade);
         Task<Jogo> Obter(Guid id);
