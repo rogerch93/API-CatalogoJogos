@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace API_CatalogoJogos.Controllers.V1
 {
-    [Route("api/V1/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class JogosController : ControllerBase
     {
@@ -74,7 +74,7 @@ namespace API_CatalogoJogos.Controllers.V1
             }
         }
 
-        [HttpPatch("{idJogo:guid/preco/{preco:double}")]
+        [HttpPatch("{idJogo:guid}/preco/{preco:double}")]
         public async Task<ActionResult> AtualizarJogo([FromRoute]Guid idJogo,[FromRoute] double preco)
         {
             try
@@ -89,7 +89,7 @@ namespace API_CatalogoJogos.Controllers.V1
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{idJogo:guid}")]
         public async Task<ActionResult> ApagarJogo([FromRoute] Guid idJogo)
         {
             try

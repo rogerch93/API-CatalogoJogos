@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace API_CatalogoJogos.Exceptions
 {
-    public class JogoNaoCadastrado
+    public class JogoNaoCadastradoException : Exception
     {
+        public JogoNaoCadastradoException()
+            : base("Este Jogo não está cadastrado")
+        {
+
+        }
     }
 }
