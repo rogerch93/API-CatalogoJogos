@@ -30,7 +30,7 @@ namespace API_CatalogoJogos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IJogoService, JogoService>();
-            services.AddScoped<IJogoRepository, JogoRepository>();
+            services.AddScoped<IJogoRepository, JogoSqlServerRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
